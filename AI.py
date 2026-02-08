@@ -5,8 +5,7 @@ from google.colab import ai
 
 #⚠️⚠️BY USING THIS AI YOU WILL GIVE YOUR MESSAGES AND QUERIES AND TIME TO GOOGLE BY USING THEIR AI⚠️⚠️
 gmt="" #type your gmt time, if positive type it alone like +5 and if it is negative type like this -6
-now=datetime.now()
-fnow=f"Year: {now.year}   Month: {now.month}   Day: {now.day}{gmt}   Hour: {now.hour}+3    Minute: {now.minute}   Second: {now.second}"
+
 chathistory=[]
 
 chans=input("Do you have a chathistory? if yes paste it here if no type capitalized N: ")
@@ -38,6 +37,8 @@ while True:
     formatted_history = "\n".join(chathistory)
 
     #Here is the query or prompt to the AI feel free to customize it
+    now=datetime.now()
+    fnow=f"Year: {now.year}   Month: {now.month}   Day: {now.day}{gmt}   Hour: {now.hour}+3    Minute: {now.minute}        Second: {now.second}"
     full_prompt = (f"""
         Context: I am {human_role}.
         Instruction: Act as an assistant with these traits: {traits}.
